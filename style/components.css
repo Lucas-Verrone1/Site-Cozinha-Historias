@@ -1,0 +1,173 @@
+.sections { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 18px; box-sizing: border-box; }
+.sections > .container { flex: 1 1 60%; }
+.sections > .section-image { flex: 0 0 220px; display: flex; align-items: center; justify-content: center; }
+.sections .img-section1 { max-width: 220px; width: 100%; height: auto; border-radius: 10px; }
+
+.sections .link-section1 { display: inline-block; margin-right: 10px; }
+
+@media (max-width: 767px) {
+    .sections { flex-direction: column; align-items: center; text-align: center; }
+    .sections > .container { width: 100%; flex: unset; }
+    .sections > .section-image { flex: unset; width: 100%; margin-top: 12px; }
+    .sections .img-section1 { max-width: 180px; }
+}
+
+@media (max-width: 480px) {
+    .sections { padding: 10px; }
+    .sections > .section-image { margin-top: 8px; }
+    .sections .img-section1 { max-width: 160px; }
+    .sections .p-section1 { width: 100%; }
+}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.reservation{
+    display: inline;
+    justify-content: center;
+}
+
+.h1-reservation{
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: Lora;
+    color: #5e0004;    
+}
+
+.input-reservation{
+    display: block;
+    width: 300px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.div-button{ 
+    justify-content: center;
+    display: flex;
+}
+
+.btn-reservation{
+    background-color: #5e0004;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 25%;
+}
+
+.reservation-message { 
+    margin-top: 10px; 
+    padding: 10px; 
+    border-radius: 6px; 
+    background: rgba(0,0,0,0.06); 
+    color: #231; max-width: 720px;
+     margin-left: auto;
+      margin-right: auto; 
+}
+.reservation-message.error { 
+    background: #ffdddd;
+    color: #900; 
+}
+
+.input-reservation { width: 100%; max-width: 420px; }
+
+.div-h1 { 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px; padding: 18px;
+    box-sizing: border-box; 
+}
+
+.div-h1 .img-about { 
+    flex: 0 0 420px;
+    display: flex;
+    justify-content: center;
+}
+
+.div-h1 .img-hall { 
+    width: 100%; 
+    max-width: 420px; 
+    height: auto; 
+    border-radius: 12px; 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12); 
+    }
+
+.div-h1 .p-textabout { flex: 1 1 auto; color: #5e0004; padding: 8px 12px; font-size: 18px; line-height: 1.6; max-width: 600px; }
+.div-h1 .p-textabout p { margin: 0; }
+
+.div-h1 .p-textabout { display: flex; align-items: center; }
+
+@media (max-width: 767px) {
+    .div-h1 { flex-direction: column; text-align: center; padding: 12px; }
+    .div-h1 .img-about { width: 90%; max-width: 360px; flex: unset; margin-bottom: 12px; }
+    .div-h1 .p-textabout { align-items: center; padding: 8px; width: 92%; }
+    .div-h1 .p-textabout p { font-size: 16px; }
+}
+
+@media (min-width: 1400px) {
+    .div-h1 .img-about { flex: 0 0 520px; }
+    .div-h1 .img-hall { max-width: 520px; }
+    .div-h1 .p-textabout { max-width: 720px; }
+}
+
+/* Footer styles */
+#footer {
+    background-color: #5e0004;
+    color: #ffffff;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+#footer .p-footer {
+    margin: 0;
+    color: #ffffff;
+}
+
+#footer .footer-credit { margin: 4px 0 0 0;
+     font-size: 0.9rem;
+     color: #ffffff; 
+}
+
+#footer .footer-credit a { 
+    color: #fffeed;
+    text-decoration: underline; 
+}
+
+    #footer .navigation { 
+    padding: 0;
+    display: flex;
+    gap: 10px; 
+}
+
+#footer .navigation a { 
+    color: #ffffff;
+    text-decoration: none;
+    padding: 4px 8px;
+    border-radius: 6px; 
+}
+
+#footer .navigation a:hover { 
+    background: rgba(255,255,255,0.08); 
+}
+
+@media (max-width: 768px) {
+    #footer { flex-direction: column; align-items: center; padding: 16px; text-align: center; }
+    #footer .navigation { margin-top: 10px; }
+}
