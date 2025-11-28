@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cardápio - Cozinha das Histórias</title>
+    <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/menu.css">
+    <link rel="stylesheet" href="../style/components.css">
 </head>
 <body id="body">
-
     <header id="header">
         <h1 class="h1-header">Cozinha de Histórias</h1>
-        <img class="logobranca" src="../assets/logodacozinhaembranco-removebg-preview.png" alt="logo">
+        <img class="img-logo" src="../assets/logodacozinhaembranco-removebg-preview.png" alt="logo">
         <nav class="navigation">
             <a href="/index.html" class="menu">Home</a>
             <a href="/index.html" class="menu">Sobre nós</a>
@@ -18,26 +19,19 @@
             <a href="/index.html" class="menu">Contate-nos</a>
         </nav>
     </header>
-
-    <br><br>
-
     <main>
         <div class="div-texto">
-        <h1>Menu</h1>
+        <h1 class="menu-space">Menu</h1>
         </div>
         <div class="div-image"> 
         <img class="img-cozinha"  src="../assets/1000349580-removebg-preview.png" alt="">
         </div>
-        <br>
-
         <section class="cardapio">
-
             <!-- ENTRADAS -->
             <div class="category">
                 <button class="toggle-btn">
                     Entradas <p class="seta">▼</p>
                 </button>
-
                 <ul class="conteudo">
                     <li><h4 style="background-image: url('/assets/batatafrita.png');"class="item-name">Batata Frita</h4> </li> 
                     <li><h4 style="background-image: url('/assets/escondidinho.png');" class="item-name">Escondidinho</h4> </li>
@@ -45,7 +39,6 @@
                     <li><h4 style="background-image: url('/assets/dadinho.png');" class="item-name">Dadinho de Tapioca</h4> </li> 
                 </ul>
             </div>
-
             <!-- PRATOS PRINCIPAIS -->
             <div class="category">
                 <button class="toggle-btn">
@@ -63,7 +56,6 @@
                     <li><h4 style="background-image: url('/assets/sururu.png');" class="item-name">Ensopado de Sururu</h4> </li> 
                 </ul>
             </div>
-
             <!-- SOBREMESAS -->
             <div class="category">
                 <button class="toggle-btn">
@@ -97,13 +89,18 @@
 
         </section>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Cozinha das Histórias | Todos os direitos reservados</p>
+    <footer id="footer">
+        <div class="footer-left">
+            <p class="p-footer">© 2025 Cozinha de Histórias. Todos os direitos reservados.</p>
+            <p class="footer-credit">Site criado por <a href="#" target="_blank">Narrativas Web</a></p>
         </div>
+        <nav class="navigation footer-nav">
+            <a href="../index.html">Home</a>
+            <a href="../index.html">Sobre nós</a>
+            <a href="./pages/menu.html">Cardápio</a>
+            <a href="../index.html" class="menu">Contate-nos</a>
+        </nav>
     </footer>
-
     <script src="../js/menu.js"></script>
 </body>
 </html>

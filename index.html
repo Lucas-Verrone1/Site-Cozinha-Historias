@@ -64,7 +64,7 @@
                 <h1 class="h1-section1">Cada prato, uma história.</h1>
                 <p class="p-section1">Bem-vindo a um lugar onde a gastronomia se encontra com a emoção. Cada ingrediente cuidadosamente selecionado, cada receita preservada com tradição, cada momento compartilhado em nossa mesa.</p>
                 <a href="./pages/menu.html" class="link-section1">Conhecer nosso cardápio</a> 
-                <a href="" class="link-section1">Reservar</a>
+                <a href="#reservation" class="link-section1">Reservar</a>
             </div>
             <div class="section-image">
                 <img src="./assets/logodacozinha.png" class="img-section1" alt="Logo Cozinha de Histórias">
@@ -137,23 +137,49 @@
                     <p class="p-about">Sustentabilidade - Responsabilidade social e produtor local.</p>
                 </div>
         </section>
-        <section class="reservation">
-            <div class="h1-reservation">
+        <section class="contact">
+            <h1 class="h1-contact">Nos encontre aqui!</h1>
+            <div class="contact-inner">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <img src="./assets/clock.png" class="img-contact" alt="Imagem Horário">
+                        <div class="contact-text">
+                            <h2 class="h2-contact">Horário de Atendimento:</h2>
+                            <p class="p-contact">Segunda a Domingo: 11:00 - 23:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="./assets/location.png" class="img-contact" alt="Imagem Localização">
+                        <div class="contact-text">
+                            <h2 class="h2-contact">Endereço:</h2>
+                            <p class="p-contact">R. Oscar Freire, 1560 - Pinheiros, São Paulo - SP, 05409-010</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.279343622442!2d-46.67569872459401!3d-23.5584087788018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce570d0c158a2d%3A0xb3bf128de66017fe!2sCyrela%20Oscar%20Freire%201560!5e0!3m2!1sen!2sbr!4v1764358417968!5m2!1sen!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="reservation" class="reservation">
+            <div class="reservation-header">
                 <h1 class="h1-reservation">Faça sua Reserva Agora!</h1>
+                <p class="p-reservation">Reserve sua mesa com antecedência para garantir uma experiência gastronômica inesquecível na Cozinha de Histórias. Preencha o formulário abaixo e prepare-se para saborear momentos especiais conosco!</p>
             </div>
             <form id="reservation-form">
+                <p class="p-reservation-form">Nome:</p>
                 <input id="res-name" placeholder="Digite seu nome completo" type="text" class="input-reservation" required>
+                <p class="p-reservation-form">E-mail:</p>
                 <input id="res-email" placeholder="Digite o seu E-mail" type="email" class="input-reservation" required>
+                <p class="p-reservation-form">Telefone:</p>
                 <input id="res-phone" placeholder="Digite o seu número" type="tel" class="input-reservation" required>
+                <p class="p-reservation-form">Data e Hora da reserva:</p>
                 <input id="res-datetime" type="datetime-local" class="input-reservation" required>
                 <div class="div-button">
                     <button type="submit" aria-placeholder="Pessoas" class="btn-reservation">Reservar Agora</button>
                 </div>
             </form>
             <div id="reservation-message" class="reservation-message" role="status" aria-live="polite" hidden></div>
-        </section>
-        <section class="contact">
-            
         </section>
     </main>
     <footer id="footer">

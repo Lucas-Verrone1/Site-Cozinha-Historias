@@ -18,6 +18,11 @@
     .sections .img-section1 { max-width: 160px; }
     .sections .p-section1 { width: 100%; }
 }
+
+@media (max-width: 480px) {
+    .btn-reservation { width: 100%; max-width: 420px; min-width: 0; }
+    #reservation-form { padding: 0 12px; }
+}
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Stack+Sans+Headline:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap');
 
@@ -27,27 +32,45 @@
 }
 
 .reservation{
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    padding: 30px 18px;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.02);
 }
+/* prevents target section from being hidden under the header when scrolled-to */
+.reservation { scroll-margin-top: 80px; }
 
+.reservation-header { text-align: center; max-width: 880px; }
 .h1-reservation{
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     text-align: center;
     font-family: Lora;
     color: #5e0004;    
 }
 
+.p-reservation { color: #5e0004; max-width: 900px; margin: 0 auto 6px auto; text-align: center; }
+
 .input-reservation{
     display: block;
-    width: 300px;
-    padding: 10px;
-    margin: 10px auto;
+    width: 100%;
+    max-width: 420px;
+    padding: 10px 12px;
+    margin: 6px auto;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 1rem;
+    box-sizing: border-box;
 }
+
+.p-reservation-form { color: #5e0004; margin: 6px 0 4px 0; }
+
+#reservation-form { width: 100%; max-width: 760px; display: grid; gap: 10px; align-items: center; justify-items: center; }
 
 .div-button{ 
     justify-content: center;
@@ -62,7 +85,9 @@
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
-    width: 25%;
+    width: auto;
+    min-width: 200px;
+    max-width: 80%;
 }
 
 .reservation-message { 
@@ -70,9 +95,8 @@
     padding: 10px; 
     border-radius: 6px; 
     background: rgba(0,0,0,0.06); 
-    color: #231; max-width: 720px;
-     margin-left: auto;
-      margin-right: auto; 
+    color: #231; max-width: 720px; width: 100%;
+    margin: 10px auto; 
 }
 .reservation-message.error { 
     background: #ffdddd;
@@ -113,6 +137,66 @@
     .div-h1 .img-about { width: 90%; max-width: 360px; flex: unset; margin-bottom: 12px; }
     .div-h1 .p-textabout { align-items: center; padding: 8px; width: 92%; }
     .div-h1 .p-textabout p { font-size: 16px; }
+}
+
+.contact {
+    background: #ffffff; 
+    padding: 36px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 2px 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact .h1-contact{
+    color: #5e0004;
+    font-family: Lora;
+    font-size: 36px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.contact .contact-inner { 
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.contact .contact-info { 
+    flex: 1 1 48%;
+    text-align: left;
+    color: #5e0004;
+}
+
+.contact .contact-info .img-contact { width: 36px; height: auto; vertical-align: middle; margin-right: 12px; }
+.contact .h2-contact { color: #5e0004; font-size: 20px; margin: 6px 0; }
+.contact .p-contact { color: #5e0004; font-size: 18px; margin: 6px 0 12px 0; }
+
+.contact .contact-item { display: grid; grid-template-columns: 44px 1fr; gap: 6px 12px; align-items: start; margin-bottom: 12px; }
+.contact .contact-item .img-contact { width: 44px; height: auto; justify-self: start; }
+.contact .contact-item .h2-contact { margin: 0 0 6px 0; }
+.contact .contact-item .p-contact { margin: 0; }
+.contact .contact-text { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.contact .contact-text .h2-contact { margin: 0 0 4px 0; }
+.contact .contact-text .p-contact { color: rgba(94,0,4,0.85); margin: 0; }
+/* remove dot separator from paragraphs since H2 and P are stacked */
+.contact .contact-text .p-contact::before { content: ''; }
+
+.contact .contact-map { flex: 1 1 48%; display: flex; align-items: center; justify-content: center; }
+.contact .contact-map iframe { width: 100%; max-width: 600px; height: 360px; border: 3px solid #5e0004; border-radius: 8px; }
+
+@media (max-width: 768px) {
+    .contact .contact-inner { flex-direction: column; align-items: center; }
+    .contact .contact-info, .contact .contact-map { flex: 1 1 100%; width: 100%; }
+    .contact .contact-map iframe { height: 260px; max-width: 100%; }
+    .contact .h1-contact { font-size: 24px; }
+    .contact .contact-text { /* mobile keeps stacked layout as well */ flex-direction: column; gap: 6px; align-items: flex-start; }
+    .contact .contact-text .p-contact::before { content: ''; }
 }
 
 @media (min-width: 1400px) {

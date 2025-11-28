@@ -162,3 +162,54 @@ document.addEventListener('DOMContentLoaded', () => {
   track.style.transform = `translateX(${position}px)`;
   start();
 });
+
+// Smooth-scroll fallback for same-page anchor links that start with '#'
+document.addEventListener('click', function (e) {
+  const anchor = e.target.closest && e.target.closest('a[href^="#"]');
+  if (!anchor) return;
+  const href = anchor.getAttribute('href');
+  if (!href || href === '#') return;
+  // Ensure link is same-page (no pathname) or already pointing to current page
+  if (anchor.origin && anchor.origin !== window.location.origin) return;
+  if (href.indexOf('http') === 0 && (new URL(href)).pathname !== window.location.pathname) return;
+
+  const target = document.querySelector(href);
+  if (!target) return;
+  e.preventDefault();
+  // Use native smooth scroll if available, else fallback to an instant scroll
+  try {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    // Update the hash in the URL so back/forward still work
+    history.pushState(null, '', href);
+  } catch (err) {
+    window.location.hash = href;
+  }
+});
+
+// Set header CSS variable so `:target { scroll-margin-top }` uses correct value.
+function setHeaderHeightVar() {
+  const header = document.getElementById('header');
+  const height = header ? header.getBoundingClientRect().height : 80;
+  document.documentElement.style.setProperty('--header-height', `${height}px`);
+}
+
+// run on load and resize (debounced)
+setHeaderHeightVar();
+let headerResizeTimer = null;
+window.addEventListener('resize', () => {
+  clearTimeout(headerResizeTimer);
+  headerResizeTimer = setTimeout(setHeaderHeightVar, 120);
+});
+
+// If the page loaded with a hash, try smooth-scrolling to the target after layout
+window.addEventListener('load', () => {
+  if (location.hash) {
+    const target = document.querySelector(location.hash);
+    if (target) {
+      // Use a short timeout to allow layout and avoid interfering with browser default jump
+      setTimeout(() => {
+        try { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } catch (e) { /* ignore */ }
+      }, 60);
+    }
+  }
+});

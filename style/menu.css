@@ -10,29 +10,16 @@
     font-family: Montserrat;
     font-size: 16px;
     background-color:  #fffeee;
+    display: flex;            /* make footer sticky */
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-#header {
-    background-color: #5e0004;
-    width: 100%;
-    font-family: Lato;  
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
+main { flex: 1 0 auto; }
 
-.h1-header { 
-    color: #fffeed;
-    margin: 36px; 
-    padding: 20px;
-    font-family: Lora;
-}
+/* header styling is now provided globally in style/style.css to keep styles consistent across pages */
 
-.img-logo {
-    width: 100px;
-    height: auto;
-}
+/* img-logo styling provided in style/style.css */
 
 .navigation {   
     padding: 25px; 
@@ -62,6 +49,10 @@
     font-size: 30px;
     font-family: Didot;
     font-style: italic;
+}
+
+.menu-space {
+    margin-top: 80px;
 }
 
 /* Principal da Página */
@@ -132,18 +123,8 @@
     transition: 0.2s;
 }
 
-footer {
-    background-color: #5e0004;
-    padding: 20px;
-    text-align: center;
-    margin-top: 5px;
-    color: white;
-}
 
-.logobranca {
-    width: 100px;
-    padding: 10px;
-}
+/* removed .logobranca - use .img-logo and global header styles instead */
 
 .div-image {
     display: flex;
