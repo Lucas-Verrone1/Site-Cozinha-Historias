@@ -205,53 +205,93 @@
     .div-h1 .p-textabout { max-width: 720px; }
 }
 
-/* Footer styles */
+/* Footer styles: structured with brand, nav and credit row */
 #footer {
     background-color: #5e0004;
     color: #ffffff;
     width: 100%;
     box-sizing: border-box;
-    padding: 18px 8%;
+    padding: 24px 6%;
+    margin-top: 40px;
+}
+
+#footer .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#footer .footer-main {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
     gap: 12px;
-    margin-top: 40px;
+}
+
+.img-logo-footer {
+    max-width: 80px;
+    height: auto;
+    display: block;
 }
 
 #footer .p-footer {
     margin: 0;
     color: #ffffff;
+    font-size: 0.95rem;
 }
 
-#footer .footer-credit { margin: 4px 0 0 0;
-     font-size: 0.9rem;
-     color: #ffffff; 
-}
-
-#footer .footer-credit a { 
-    color: #fffeed;
-    text-decoration: underline; 
-}
-
-    #footer .navigation { 
+#footer .footer-nav {
     padding: 0;
     display: flex;
-    gap: 10px; 
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-#footer .navigation a { 
+#footer .footer-nav a {
     color: #ffffff;
     text-decoration: none;
-    padding: 4px 8px;
-    border-radius: 6px; 
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-weight: 600;
 }
 
-#footer .navigation a:hover { 
-    background: rgba(255,255,255,0.08); 
+#footer .footer-nav a:hover {
+    background: rgba(255,255,255,0.08);
 }
+
+.footer-contact { color: #ffffff; font-size: 0.95rem; }
+
+.footer-credit-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.footer-credit {
+    color: #ffffff; font-size: 0.95rem;
+}
+
+.footer-credit a { color: #fffeed; text-decoration: underline; }
+
+.img-narrativas { max-width: 80px; height: auto; display: block; }
+
+/* Header logo and other site logos reduced for visual consistency */
+.img-logo { max-width: 110px; height: auto; display: block; }
+.img-cozinha { max-width: 180px; height: auto; display: block; }
 
 @media (max-width: 768px) {
-    #footer { flex-direction: column; align-items: center; padding: 16px; text-align: center; }
-    #footer .navigation { margin-top: 10px; }
+    #footer { padding: 18px 4%; }
+    #footer .footer-main { flex-direction: column; align-items: center; text-align: center; }
+    .footer-credit-row { justify-content: center; }
+    .img-logo-footer { max-width: 70px; }
+    .img-narrativas { max-width: 70px; }
 }
