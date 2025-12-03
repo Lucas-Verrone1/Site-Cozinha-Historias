@@ -268,6 +268,45 @@
 
 .footer-contact { color: #ffffff; font-size: 0.95rem; }
 
+.footer-contact-social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #ffffff;
+    font-size: 0.95rem;
+}
+
+.footer-contact-social p {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    display: block;
+    opacity: 0.9;
+    transition: opacity 0.2s ease;
+}
+
+.social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.social-icons a:hover .social-icon {
+    opacity: 1;
+}
+
+
 .footer-credit-row {
     display: flex;
     align-items: center;
@@ -294,4 +333,12 @@
     .footer-credit-row { justify-content: center; }
     .img-logo-footer { max-width: 70px; }
     .img-narrativas { max-width: 70px; }
+    .footer-contact-social {
+        flex-direction: column;
+        gap: 8px;
+        align-items: center;
+    }
+    .footer-contact-social p {
+        white-space: normal;
+    }
 }
