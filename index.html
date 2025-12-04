@@ -11,12 +11,14 @@
 <body id="body">
     <header id="header">
         <h1 class="h1-header">Cozinha de Histórias</h1>
-        <img src="./assets/logodacozinhaembranco-removebg-preview.png" class="img-logo" alt="Logo Cozinha de Histórias">
+        <a href="./index.html">
+            <img src="./assets/logodacozinhaembranco-removebg-preview.png" class="img-logo" alt="Logo Cozinha de Histórias">
+        </a>
         <nav class="navigation">
             <a href="./index.html" class="menu">Home</a>
-            <a href="#sobre-nos" class="menu">Sobre nós</a>
+            <a href="#contate-nos" class="menu">Sobre nós</a>
             <a href="./pages/menu.html" class="menu">Cardápio</a>
-            <a href="#contate-nos" class="menu">Contate-nos</a>
+            <a href="#reservation" class="menu">Reservar</a>
         </nav>
     </header>
     <main>
@@ -175,6 +177,8 @@
                 <input id="res-phone" placeholder="Digite o seu número" type="tel" class="input-reservation" required>
                 <p class="p-reservation-form">Data e Hora da reserva:</p>
                 <input id="res-datetime" type="datetime-local" class="input-reservation" required>
+                <p class="p-reservation-form">Quantidade de Pessoas:</p>
+                <input id="res-people" type="number" min="1" max="8" placeholder="Digite a quantidade de pessoas (máx. 8)" class="input-reservation" required>
                 <div class="div-button">
                     <button type="submit" aria-placeholder="Pessoas" class="btn-reservation">Reservar Agora</button>
                 </div>
@@ -192,9 +196,9 @@
 
                 <nav class="navigation footer-nav">
                     <a href="./index.html">Home</a>
-                    <a href="#sobre-nos">Sobre nós</a>
+                    <a href="#contate-nos">Sobre nós</a>
                     <a href="./pages/menu.html">Cardápio</a>
-                    <a href="#contate-nos" class="menu">Contate-nos</a>
+                    <a href="#reservation" class="menu">Reservar</a>
                     <a href="./pages/politcs.html" class="menu">Política de Privacidade</a>
                 </nav>
 
